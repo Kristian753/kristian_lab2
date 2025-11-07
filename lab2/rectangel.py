@@ -41,3 +41,35 @@ class rectangel:
         # Jämför om två rektanglar har samma mått
         if not isinstance(other, rectangel): return False
         return self.width == other.width and self.height == other.height
+    
+    def __gt__(self,other):
+        # Jämför om denna rektangel har större area
+        if not isinstance(other, rectangel): return False
+        return self.width * self.height > other.width * other.height
+    
+    def __lt__(self,other):
+        # Jämför om denna rektangel har mindre area
+        if not isinstance(other, rectangel): return False
+        return self.width * self.height < other.width * other.height
+    
+    def __le__(self,other):
+        # Jämför om denna rektangel har mindre eller lika area
+        if not isinstance(other, rectangel): return False
+        return self.width * self.height <= other.width * other.height
+    
+    def __ge__(self,other):
+        # Jämför om denna rektangel har större eller lika area
+        if not isinstance(other, rectangel): return False
+        return self.width * self.height >= other.width * other.height
+    
+    def __repr__(self):
+        # Returnerar en teknisk representation av rektangeln
+        return f"rectangel({self.x}, {self.y}, {self.width}, {self.height})"
+    
+    def __str__(self):
+        # Returnerar en läsbar beskrivning av rektangeln
+        return f"rectangel with top-left corner at ({self.x}, {self.y}), width {self.width} and height {self.height}"
+    
+    def is_square(self):
+        # Kontrollerar om rektangeln är en kvadrat
+        return self.width == self.height
