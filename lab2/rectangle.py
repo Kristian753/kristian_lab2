@@ -1,4 +1,4 @@
-class rectangel:
+class Rectangle:
     def __init__(self,x,y,width, height):
         # Kontrollerar att width är ett nummer
         if type(width) not in [int, float]: 
