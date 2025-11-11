@@ -39,27 +39,27 @@ class Rectangle:
 
     def __eq__(self, other):
         # Jämför om två rektanglar har samma mått
-        if not isinstance(other, rectangel): return False
+        if not isinstance(other, Rectangle): return False
         return self.width == other.width and self.height == other.height
     
     def __gt__(self,other):
         # Jämför om denna rektangel har större area
-        if not isinstance(other, rectangel): return False
+        if not isinstance(other, Rectangle): return False
         return self.width * self.height > other.width * other.height
     
     def __lt__(self,other):
         # Jämför om denna rektangel har mindre area
-        if not isinstance(other, rectangel): return False
+        if not isinstance(other, Rectangle): return False
         return self.width * self.height < other.width * other.height
     
     def __le__(self,other):
         # Jämför om denna rektangel har mindre eller lika area
-        if not isinstance(other, rectangel): return False
+        if not isinstance(other, Rectangle): return False
         return self.width * self.height <= other.width * other.height
     
     def __ge__(self,other):
         # Jämför om denna rektangel har större eller lika area
-        if not isinstance(other, rectangel): return False
+        if not isinstance(other, Rectangle): return False
         return self.width * self.height >= other.width * other.height
     
     def __repr__(self):
