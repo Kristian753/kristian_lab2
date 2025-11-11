@@ -1,3 +1,4 @@
+import math
 class Circle:
     def __init__(self, x, y, radius):
         # kollar om radius är ett tal
@@ -12,12 +13,12 @@ class Circle:
     @property # read only property
     def area(self):
     # räkna area med pi
-        return 3.14 * self.radius * self.radius
+        return math.pi * self.radius * self.radius
 
     @property # read only property
     def perimeter(self):
     # räknar cirkelns omkrets
-        return 2 * 3.14 * self.radius 
+        return 2 * math.pi * self.radius 
 
     def translate(self, dx, dy):# flyttar cirkeln
     # kollar om dx och dy är nummer
